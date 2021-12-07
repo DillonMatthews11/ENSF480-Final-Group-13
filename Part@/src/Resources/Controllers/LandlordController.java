@@ -18,9 +18,14 @@ public class LandlordController {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			System.out.println("bruh");
-			
+
+			if(e.getSource() == theView.getViewPropertyButton()) {
+
+			} else if (e.getSource() == theView.getAddPropertyButton()) {
+
+			} else if (e.getSource() == theView.getLogoutButton()) {
+				
+			}
 		}
-		
 	}
 }

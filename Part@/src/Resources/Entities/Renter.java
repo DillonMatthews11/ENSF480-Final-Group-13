@@ -2,7 +2,7 @@ package Resources.Entities;
 
 import java.util.Vector;
 
-public class Renter extends Person{
+public class Renter extends Person {
     private Vector<String> preferences;
     
     

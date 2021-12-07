@@ -11,7 +11,8 @@ public class Landlord extends Person {
         this.amountOwed = amountOwed;
         this.ownedProperties = new Vector<Property>();
     }
-    public void addProperty(Property p){
-        ownedProperties.add(p);
+    public void addProperty(String address, String propertyType, double bathrooms,
+     int bedrooms, String quadrant, boolean furnishedStatus, String propertyStatus, String ownerFirstName, String ownerLastName){
+        ownedProperties.add(new Property(-1, address, propertyType, bathrooms, bedrooms, quadrant, furnishedStatus, propertyStatus,ownerFirstName, ownerLastName));
     }
 }
