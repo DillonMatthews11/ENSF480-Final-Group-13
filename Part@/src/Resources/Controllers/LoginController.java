@@ -23,6 +23,7 @@ public class LoginController {
 	private String fName;
 	private String lName;
 	private String email;
+	
 	public LoginController(LoginView theView) {
 		this.theView = theView;
 		this.theView.addModeListener(new ModeListener());
@@ -125,7 +126,7 @@ public class LoginController {
 				}else {
 					if(validLogin(theView.getUserName(),theView.getPassword())) {
 						theView.dispose();
-						if(mode.equals("Landlord")) {
+						if(mode.equals("LandLord")) {
 							//create landlord view
 							LandlordView lv = new LandlordView(theView.getUserName());
 	//						//populate the landlord entity
@@ -151,6 +152,7 @@ public class LoginController {
 							//renter view
 							//??idk @Dillon, @all if this should continue as your 
 							RenterView rv = new RenterView(theView.getUserName());
+							Renter renter = new Renter(email, "joe","mama", new Vector<String>());
 	//						//populate renter 
 	//						//string vector to store renter preferences
 	//						Vector<String> prefs = new Vector<String>(7);
@@ -173,7 +175,7 @@ public class LoginController {
 	//						//create new entity
 	//						Renter renter = new Renter(fName, lName, email, prefs);
 	//						//create the renter controller
-	//						RenterController rc = new RenterController(rv, renter);
+							RenterController rc = new RenterController(rv, renter);
 						}
 						else {
 							//Manager view

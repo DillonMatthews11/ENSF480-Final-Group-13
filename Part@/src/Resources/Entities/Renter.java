@@ -13,6 +13,12 @@ public class Renter extends Person {
         this.lastName = last;
         this.email = emailadd;
     }
+    public Vector<String> getPrefs(){
+    	return preferences;
+    }
+    public void setPrefs(Vector<String> prefs) {
+    	preferences = prefs;
+    }
 
     
 }

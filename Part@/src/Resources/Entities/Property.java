@@ -11,6 +11,7 @@ public class Property {
     private int propertyId;
     private String ownerFirstName;
     private String ownerLastName;
+    
     public Property(int id, String address, String propertyType, double bathrooms, int bedrooms, String quadrant,
      boolean furnishedStatus, String propertyStatus,String ownerFirstName, String ownerLastName){
         propertyId = id;
@@ -23,6 +24,29 @@ public class Property {
         this.propertyStatus = propertyStatus;
         this.ownerFirstName = ownerFirstName;
         this.ownerLastName = ownerLastName;
+    }
+    public String getAll() {
+    	String s = "Address: ";
+    	s+= address;
+    	s+= " Property Type: ";
+    	s+= propertyType;
+    	s+= " number of bedrooms: ";
+    	s+= bedrooms;
+    	s+= "number of Bathrooms: ";
+    	s+= bathrooms;
+    	s+= " ";
+    	s+= furnishedStatus;
+    	s+= " Quadrant ";
+    	s+= quadrant;
+    	s+= " id ";
+    	s+= propertyId;
+    	return s;
+    }
+    public String getPropertyStatus() {
+    	return propertyStatus;
+    }
+    public String getPropertyType() {
+    	return propertyType;
     }
     public String getAddress(){
         return address;

@@ -84,6 +84,7 @@ public class LoginView extends JFrame{
         this.add(logPanel);
         this.setVisible(true);
     }
+    
     public String getFirst(){
         return firstName.getText();
     }
